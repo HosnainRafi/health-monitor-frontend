@@ -241,7 +241,7 @@ function ResultPage() {
       }
       try {
         const res = await axios.post(
-          "http://localhost:5000/api/analyze",
+          "https://heath-monitor-backend.vercel.app/api/analyze",
           userInput
         );
         setResult(res.data);

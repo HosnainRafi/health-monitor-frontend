@@ -9,11 +9,14 @@ function NutritionForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:5000/api/analyze", {
-      weight,
-      age,
-      foodInput,
-    });
+    const res = await axios.post(
+      "https://heath-monitor-backend.vercel.app/api/analyze",
+      {
+        weight,
+        age,
+        foodInput,
+      }
+    );
     setResult(res.data);
   };
 
